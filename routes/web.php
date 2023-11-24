@@ -18,9 +18,4 @@ Route::get('/', function () {
 })->name("welcome");
 
 Route::get('kepegawaian/index', 'kepegawaian\KepegawaianController@index');
-Route::get('kepegawaian/{id}/edit', 'kepegawaian\KepegawaianController@edit');
-Route::put('kepegawaian/{id}/update', 'kepegawaian\KepegawaianController@update');
-Route::get('kepegawaian/add', 'kepegawaian\KepegawaianController@add');
-Route::post('kepegawaian/save', 'kepegawaian\KepegawaianController@save');
-Route::get('kepegawaian/{id}/delete', 'kepegawaian\KepegawaianController@delete');
-Route::get('kepegawaian/find', 'kepegawaian\KepegawaianController@find');
+Route::get('kepegawaian/cetak_pdf', 'kepegawaian\KepegawaianController@cetak_pdf');

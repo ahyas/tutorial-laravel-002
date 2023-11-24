@@ -6,39 +6,27 @@
         <div class="card-header">Daftar pegawai </div>
 
         <div class="card-body">
-            <a class="btn btn-primary btn-sm" href="add" style="margin-bottom:15px">Tambah</a>
-            <form action="find" method="GET">
-            <span>Pencarian pegawai</span>
-                <div class="form-row">
-                    <div class="col-10  ">
-                        <input type="text" class="form-control form-control-sm" placeholder="Masukan nama pegawai" name="kata_kunci" style="margin-bottom:15px" >
-                    </div>
-                    <div class="col">
-                        <button type="submit" class="btn btn-primary btn-sm btn-block">Cari</button>
-                    </div>
-                    <div class="col">
-                        <a href="index" class="btn btn-danger btn-sm btn-block">Reset</a>
-                    </div>
-                </div>
-            </form>
+            <a class="btn btn-danger btn-sm" href="cetak_pdf" style="margin-bottom:15px">Cetak PDF</a>
 
-            <table class="table table-striped">
+            <table class="table table-striped table-sm">
                 <tr>
-                    <th>Nama</th>
-                    <th>Alamat</th>
-                    <th>Tanggal lahir</th>
-                    <th>Jabatan</th>
-                    <th>Penghasilan</th>
-                    <th>Action</th>
+                    <th>Name</th>
+                    <th width="150px">Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Country</th>
+                    <th>Region</th>
+                    <th>Currency</th>
                 </tr>
                 @foreach($table as $row)
                 <tr>
-                    <td>{{$row->nama}}</td>
-                    <td>{{$row->alamat}}</td>
-                    <td>{{$row->tanggal_lahir}}</td>
-                    <td>{{$row->jabatan}}</td>
-                    <td>{{$row->penghasilan}}</td>
-                    <td><a class="btn btn-success btn-sm" href="{{$row->id}}/edit">Edit</a> <a class="btn btn-danger btn-sm" href="{{$row->id}}/delete">Delete</a></td>
+                    <td>{{$row->name}}</td>
+                    <td>{{$row->phone}}</td>
+                    <td>{{$row->email}}</td>
+                    <td>{{$row->address}}</td>
+                    <td>{{$row->country}}</td>
+                    <td>{{$row->region}}</td>
+                    <td>{{$row->currency}}</td>
                 </tr>
                 @endforeach
             </table>
